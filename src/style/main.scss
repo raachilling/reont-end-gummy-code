@@ -1,6 +1,7 @@
 html {
     font-size: 62.5%;
 }
+
 *,
 *::after,
 *::before {
@@ -8,5 +9,6 @@ html {
     padding: 0;
     box-sizing: inherit;
 }
+
 @import 'layout';
 @import 'headernavbar';
