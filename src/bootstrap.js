@@ -20,10 +20,11 @@ function main() {
     <Provider store={createStoreWithMiddleware(reducers)}>
       <Router history={history}>
         <Layout>
-            <Switch>
-              <Route path='/' exact component={Signin}/>
-              <Route path='/' exact component={Signup}/>
-            </Switch>
+          <Switch>
+            <Route path='/' exact component={Signin}/>
+            <Route path='/signin' exact component={Signin}/>
+            <Route path='/signup' exact component={Signup}/>
+          </Switch>
         </Layout>
       </Router>
     </Provider>
