@@ -23,14 +23,18 @@
 
         color: #333;
         font-size: 16px;
+    
+        & > * {
+            grid-row: s/e;
+        }
 
-    & > * {
-        grid-row: s/e;
+        margin-right: 47px;
     }
+
 }
 
-.greem-text {
-    color:#00cb79 !important;
+.green-text {
+    color: #00CB79 !important;
 }
 
 .navbar {
@@ -46,9 +50,12 @@
     justify-content: center;
     grid-column-gap: 40px;
 
+    color: #E6E6E6;
+    font-size: 18px;
+    font-weight: normal;
+
     & > * {
         grid-row: s/e;
     }
-    
-    margin-right: 47px;
+
 }
