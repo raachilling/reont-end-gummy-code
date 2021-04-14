@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 
+import PageTitle from '../pageTitle';
+
 class AccountInformation extends Component {
+
+    onSubmit = (fields) => {
+        console.log(fields);
+    }
 
     renderContent() {
         return <h1> content </h1>
@@ -8,8 +14,9 @@ class AccountInformation extends Component {
 
     render() {
         return (
-            <div>
-                { this.renderContent() }
+            <div className='account-information'>
+                <PageTitle className='account-information' title='Account Information' />
+                <AccountInformationForm onSubmit={this.onSubmit} className='account-information__form' />
             </div>
         )
     }
