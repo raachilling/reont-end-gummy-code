@@ -56,30 +56,43 @@ constructor() {
                 placeholder='Zipcode'
                 name='zipcode'
                 component={FormInput}/>
-
-
+                <div className='account-information-form__line'></div>
                 {
                 this.state.showPasswords ?
                     [
-                        <Field key={0} className='sign-in-form__current'
+                        <Field key={0} className='account-information-form__current'
                         type='password'
                         title='Current Password'
                         placeholder=' Current Password'
                         name='current'
                         component={FormInput}/>,
 
-                        <Field key={1} className='sign-in-form__new'
+                        <Field key={1} className='account-information-form__new'
                         type='new'
                         title='New Password'
                         placeholder=' New Password'
                         name='new'
                         component={FormInput}/>,
-                        <Field key={2} className='sign-in-form__confirm'
+                        <Field key={2} className='account-information-form__confirm'
                         type='confirm'
                         title='Confirm Password'
                         placeholder=' Confirm Password'
                         name='confirm'
-                        component={FormInput}/>
+                        component={FormInput}/>,
+
+                        <Field key={3} className='account-information-form__update-information'
+                        onClick={() => this.setState({ showPasswords: false })}
+                        type='submit'
+                        title='Update Information'
+                        name='update-infromation'
+                        component={FormButton}/>,
+                        <Field key={4} className='account-information-form__cancel'
+                        onClick={() => this.setState({ showPasswords: false })}
+                        type='button'
+                        title='Cancel'
+                        name='cancel'
+                        short={true}
+                        component={FormButton}/>
                     ]
                     :
                         <Field className='account-infromation-form__change-password'
