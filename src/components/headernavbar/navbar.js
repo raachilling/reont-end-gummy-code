@@ -29,7 +29,8 @@ class Navbar extends Component {
 function mapStateToProps(state) {
     const{ navbarLinks, onClick } = state.headerNavbar;
     return {
-        navbarLinks
+        navbarLinks, 
+        onClick
     }
 }
 
