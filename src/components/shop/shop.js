@@ -29,10 +29,14 @@ class Shop extends Component {
         return true
     }
 
+    onSubmit = (fields) => {
+        this.props.filterProductsWithQuery(fields)
+    }
+
     render() {
         return (
             <div className='shop'>
-                <ShopSearchBar className='shop__search-bar'/>
+                <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar'/>
                 <div className='shop__products'>
                     {
                         this.props.filteredProducts.map(product => {

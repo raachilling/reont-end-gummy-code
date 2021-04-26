@@ -5,6 +5,13 @@ import {
     FILTER_PRODUCTS_WITH_CATEGORY_ID
 } from './types';
 
+export function filterProductsWithQuery(fileds) {
+    return({
+        type: FILTER_PRODUCTS_WITH_QUERY,
+        payload: fields
+    })
+}
+
 export function filterProductsWithCategoryId(_id) {
     console.log(_id);
     return({
