@@ -55,3 +55,33 @@
         display: grid;
     }
 }
+
+.cart-footer {
+
+    &__chechout{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        
+        height: 38px;
+        width: 183px;
+        border-radius: 20px;
+        background-color: #00CB79;
+        
+        color:white;
+        font-size: 1.6rem;
+        font-weight: 600;
+
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: sacle(0.97);
+        }
+        &:active {
+            transform: sacle(0.95);
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
